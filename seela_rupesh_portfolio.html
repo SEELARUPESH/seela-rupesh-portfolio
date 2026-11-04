@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portfolio of Seela Rupesh — Electronics and Communication Engineering student focused on Digital Design, RTL Design and Embedded Systems.">
+  <title>Seela Rupesh | ECE Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{--bg:#0b1017;--panel:#111a24;--panel2:#151f2b;--text:#edf3f8;--muted:#9aabba;--line:#263443;--accent:#65e0c2;--blue:#83aaff;--max:1120px}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--text);font-family:Manrope,system-ui,sans-serif;line-height:1.65}
+    a{color:inherit;text-decoration:none}.wrap{width:min(var(--max),calc(100% - 44px));margin:auto}
+    nav{height:76px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line)}
+    .brand{font-weight:800;letter-spacing:.04em}.brand span{color:var(--accent)}.navlinks{display:flex;gap:26px;color:var(--muted);font-size:.88rem}.navlinks a:hover,.textlink:hover{color:var(--accent)}
+    .mono{font-family:"DM Mono",monospace;color:var(--accent);font-size:.78rem;letter-spacing:.13em;text-transform:uppercase}
+    .hero{padding:100px 0 90px;display:grid;grid-template-columns:1.5fr .8fr;gap:55px;align-items:center;min-height:610px}
+    h1{font-size:clamp(3.2rem,7vw,6.3rem);line-height:.99;letter-spacing:-.075em;margin:18px 0 24px}
+    h1 span{color:var(--accent)}.lead{max-width:650px;color:var(--muted);font-size:1.08rem}
+    .actions{display:flex;gap:13px;flex-wrap:wrap;margin-top:32px}.btn{padding:12px 19px;border-radius:7px;font-weight:700;font-size:.9rem;border:1px solid var(--line);display:inline-flex;align-items:center;gap:9px}
+    .btn.primary{background:var(--accent);color:#07130f;border-color:var(--accent)}.btn:hover{transform:translateY(-2px);transition:.2s}
+    .hero-card{background:linear-gradient(145deg,#172633,#101720);border:1px solid #2a3b49;border-radius:18px;padding:28px;position:relative;overflow:hidden}
+    .hero-card:before{content:"";position:absolute;width:190px;height:190px;border:1px solid #35574f;border-radius:50%;right:-70px;top:-75px;box-shadow:0 0 0 24px #65e0c20a,0 0 0 48px #65e0c208}
+    .initials{font-size:5rem;font-weight:800;letter-spacing:-.1em;color:var(--accent);line-height:1.2}
+    .statgrid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:25px}.stat{padding:13px;background:#0d151e;border:1px solid var(--line);border-radius:9px}.stat strong{display:block;font-size:1.25rem}.stat small{color:var(--muted)}
+    section{padding:78px 0;border-top:1px solid var(--line)}.sectionhead{display:flex;align-items:end;justify-content:space-between;gap:20px;margin-bottom:34px}
+    h2{font-size:clamp(2rem,4vw,3rem);letter-spacing:-.06em;margin:7px 0 0}.sub{color:var(--muted);max-width:500px}
+    .aboutgrid{display:grid;grid-template-columns:1.1fr .9fr;gap:45px}.aboutgrid p{color:var(--muted);margin-top:0}
+    .chips{display:flex;flex-wrap:wrap;gap:9px}.chip{border:1px solid var(--line);background:var(--panel);padding:8px 12px;border-radius:6px;color:#c9d5df;font-size:.85rem}
+    .cards{display:grid;grid-template-columns:repeat(2,1fr);gap:17px}.card{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:25px;display:flex;flex-direction:column;min-height:245px}
+    .card:hover{border-color:#527d75;transform:translateY(-3px);transition:.2s}.cardtop{display:flex;justify-content:space-between;align-items:center;margin-bottom:17px}.number{font-family:"DM Mono",monospace;color:var(--accent);font-size:.8rem}
+    h3{font-size:1.15rem;line-height:1.35;margin:0 0 11px}.card p{color:var(--muted);font-size:.92rem;margin:0 0 17px}.tags{display:flex;gap:7px;flex-wrap:wrap;margin-top:auto}.tag{font: .7rem "DM Mono",monospace;color:var(--blue);background:#83aaff12;padding:5px 8px;border-radius:4px}
+    .timeline{border-left:1px solid #385047;margin-left:8px;padding-left:27px;display:grid;gap:27px}.entry{position:relative}.entry:before{content:"";position:absolute;left:-33px;top:8px;width:11px;height:11px;border-radius:50%;background:var(--accent);box-shadow:0 0 0 5px #65e0c21a}
+    .entry h3{margin-bottom:4px}.entry .meta{font: .76rem "DM Mono",monospace;color:var(--accent);margin-bottom:8px}.entry p{color:var(--muted);margin:0}
+    .edu{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.edu .card{min-height:165px}.edu .year{color:var(--accent);font: .76rem "DM Mono",monospace}
+    .contactbox{background:linear-gradient(120deg,#142a2b,#121c28);border:1px solid #315047;border-radius:15px;padding:40px;display:flex;justify-content:space-between;align-items:center;gap:30px}.contactbox h2{max-width:520px}
+    footer{padding:28px 0;color:var(--muted);font-size:.8rem;display:flex;justify-content:space-between;gap:20px}
+    .socials{display:flex;gap:18px;flex-wrap:wrap}.textlink{color:#cbd7e1;font-size:.9rem}
+    @media(max-width:760px){.navlinks{gap:12px;font-size:.75rem}.hero{grid-template-columns:1fr;padding:70px 0;gap:35px;min-height:auto}.hero-card{max-width:440px}.aboutgrid,.cards,.edu{grid-template-columns:1fr}.sectionhead{display:block}.contactbox{display:block;padding:28px}.contactbox .btn{margin-top:20px}section{padding:58px 0}}
+    @media(max-width:480px){.wrap{width:min(var(--max),calc(100% - 30px))}nav{height:auto;padding:18px 0;align-items:flex-start}.navlinks{max-width:210px;justify-content:flex-end;flex-wrap:wrap}.hero{padding-top:60px}h1{font-size:3.5rem}footer{display:block}footer span{display:block;margin-top:8px}}
+  </style>
+</head>
+<body>
+  <header class="wrap">
+    <nav>
+      <a class="brand" href="#home">SR<span>.</span></a>
+      <div class="navlinks"><a href="#about">About</a><a href="#skills">Skills</a><a href="#projects">Projects</a><a href="#experience">Experience</a><a href="#contact">Contact</a></div>
+    </nav>
+  </header>
+
+  <main>
+    <div class="wrap hero" id="home">
+      <div>
+        <div class="mono">ECE Undergraduate · Digital Design · Embedded Systems</div>
+        <h1>Seela<br><span>Rupesh.</span></h1>
+        <p class="lead">I’m an Electronics and Communication Engineering student interested in building reliable digital systems — from Verilog RTL and FSM-based designs to embedded hardware prototypes and functional verification.</p>
+        <div class="actions">
+          <a class="btn primary" href="#projects">Explore my work ↗</a>
+          <a class="btn" href="mailto:rupeshseela05@gmail.com">Contact me</a>
+        </div>
+      </div>
+      <aside class="hero-card">
+        <div class="mono">Engineering profile / 01</div>
+        <div class="initials">SR</div>
+        <p style="color:var(--muted);margin:0">Electronics & Communication Engineering<br>Pragati Engineering College</p>
+        <div class="statgrid">
+          <div class="stat"><strong>8.85</strong><small>CGPA / 10</small></div>
+          <div class="stat"><strong>2027</strong><small>Expected graduation</small></div>
+          <div class="stat"><strong>3</strong><small>Featured projects</small></div>
+          <div class="stat"><strong>81%</strong><small>NPTEL score</small></div>
+        </div>
+      </aside>
+    </div>
+
+    <section id="about">
+      <div class="wrap">
+        <div class="sectionhead"><div><div class="mono">01 / About</div><h2>Engineering with purpose.</h2></div></div>
+        <div class="aboutgrid">
+          <p>Electronics and Communication Engineering undergraduate with hands-on experience in Digital Design, Embedded Systems, RTL Design, Sensor Interfacing and Functional Verification. I have developed and verified modular Verilog-based systems using finite state machines, testbenches and waveform analysis, alongside an Arduino-based assistive prototype. I’m interested in applying electronics, testing, troubleshooting and problem-solving skills in an industrial environment with a focus on quality, safety and continuous improvement.</p>
+          <div><div class="mono" style="margin-bottom:14px">Areas of interest</div><div class="chips"><span class="chip">RTL Design</span><span class="chip">Digital Electronics</span><span class="chip">VLSI Fundamentals</span><span class="chip">Embedded Systems</span><span class="chip">Functional Verification</span><span class="chip">Hardware Prototyping</span></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills">
+      <div class="wrap">
+        <div class="sectionhead"><div><div class="mono">02 / Technical toolkit</div><h2>Skills & tools.</h2></div><p class="sub">Tools and concepts used across my academic projects and technical training.</p></div>
+        <div class="aboutgrid">
+          <div><h3>Design & engineering</h3><div class="chips"><span class="chip">Verilog HDL</span><span class="chip">RTL Design</span><span class="chip">Finite State Machines</span><span class="chip">Combinational Logic</span><span class="chip">Sequential Logic</span><span class="chip">Testbench Development</span><span class="chip">Functional Verification</span><span class="chip">Arduino Uno</span><span class="chip">Sensor Interfacing</span></div></div>
+          <div><h3>Development environment</h3><div class="chips"><span class="chip">Icarus Verilog</span><span class="chip">GTKWave</span><span class="chip">Arduino IDE</span><span class="chip">VS Code</span><span class="chip">Git</span><span class="chip">GitHub</span><span class="chip">EDA Playground</span><span class="chip">Tinkercad</span></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects">
+      <div class="wrap">
+        <div class="sectionhead"><div><div class="mono">03 / Selected work</div><h2>Projects.</h2></div><p class="sub">A selection of digital design and embedded systems work.</p></div>
+        <div class="cards">
+          <article class="card"><div class="cardtop"><span class="number">PROJECT / 01</span><span class="mono">RTL DESIGN</span></div><h3>Traffic Light Controller with Emergency Vehicle Priority</h3><p>Designed an FSM-based controller for a four-way intersection with emergency vehicle priority. Built modular Traffic FSM, Timer and Top modules, then verified behavior using self-written testbenches and waveform analysis.</p><div class="tags"><span class="tag">Verilog HDL</span><span class="tag">FSM</span><span class="tag">Icarus Verilog</span><span class="tag">GTKWave</span></div></article>
+          <article class="card"><div class="cardtop"><span class="number">PROJECT / 02</span><span class="mono">DIGITAL SYSTEM</span></div><h3>Digital Voting Machine with Secure Memory</h3><p>Designed an FSM-controlled voting system with vote validation, debouncing, secure vote counting and winner detection. Implemented simulated EEPROM/Flash memory updates and 7-segment display interfacing using modular RTL.</p><div class="tags"><span class="tag">Verilog HDL</span><span class="tag">RTL</span><span class="tag">Testbench</span><span class="tag">7-Segment</span></div></article>
+          <article class="card"><div class="cardtop"><span class="number">PROJECT / 03</span><span class="mono">EMBEDDED</span></div><h3>Smart Cane for Visually Impaired</h3><p>Built an Arduino Uno-based assistive prototype using an ultrasonic sensor for obstacle detection. Integrated hardware components and validated sensor performance through prototype testing.</p><div class="tags"><span class="tag">Arduino Uno</span><span class="tag">Ultrasonic Sensor</span><span class="tag">Sensor Interfacing</span></div></article>
+          <article class="card"><div class="cardtop"><span class="number">FOCUS / NEXT</span><span class="mono">CONTINUOUS LEARNING</span></div><h3>Digital design & verification</h3><p>Continuing to strengthen core ECE foundations through digital logic, modular RTL development, simulation, debugging and systematic verification.</p><div class="tags"><span class="tag">Digital Electronics</span><span class="tag">Verification</span><span class="tag">Core ECE</span></div></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="experience">
+      <div class="wrap">
+        <div class="sectionhead"><div><div class="mono">04 / Experience & education</div><h2>Learning journey.</h2></div></div>
+        <div class="aboutgrid">
+          <div><h3 style="margin-bottom:23px">Internship</h3><div class="timeline"><div class="entry"><div class="meta">DIGITAL ELECTRONICS & VLSI INTERNSHIP</div><h3>VLSI Training</h3><p>Completed training covering digital logic design, VLSI fundamentals, RTL concepts and semiconductor technologies, with exposure to combinational and sequential circuit design principles.</p></div></div></div>
+          <div><h3 style="margin-bottom:23px">Education</h3><div class="timeline">
+            <div class="entry"><div class="meta">2023 — 2027</div><h3>B.Tech — Electronics and Communication Engineering</h3><p>Pragati Engineering College · CGPA: 8.85/10</p></div>
+            <div class="entry"><div class="meta">2021 — 2023</div><h3>Intermediate (MPC)</h3><p>Akhil Junior College · 94.6%</p></div>
+            <div class="entry"><div class="meta">2018 — 2021</div><h3>Secondary School Certificate</h3><p>Aditya High School · 94.5%</p></div>
+          </div></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="credentials">
+      <div class="wrap">
+        <div class="sectionhead"><div><div class="mono">05 / Credentials</div><h2>Certifications & achievement.</h2></div></div>
+        <div class="cards">
+          <article class="card"><div class="number">CERTIFICATION / 01</div><h3>Electronic System Design</h3><p>NPTEL</p></article>
+          <article class="card"><div class="number">CERTIFICATION / 02</div><h3>Sensors & Sensor Circuit Design</h3><p>Coursera</p></article>
+          <article class="card"><div class="number">CERTIFICATION / 03</div><h3>PCB Designing Excellence Certificate</h3><p>TECHNEX’24</p></article>
+          <article class="card"><div class="number">ACHIEVEMENT</div><h3>81% — NPTEL</h3><p>Scored 81% in Electronic Systems Design: Hands-on Circuits and PCB Design with CAD Software.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="wrap">
+        <div class="contactbox"><div><div class="mono">06 / Get in touch</div><h2>Let’s connect and build something meaningful.</h2><p style="color:var(--muted);margin-bottom:0">Open to learning opportunities, internships and conversations around Core ECE, Digital Design and Embedded Systems.</p></div><a class="btn primary" href="mailto:rupeshseela05@gmail.com">Email Rupesh ↗</a></div>
+        <div class="socials" style="margin-top:25px">
+          <a class="textlink" href="https://www.linkedin.com/in/seela-rupesh-168a712b8" target="_blank" rel="noreferrer">LinkedIn ↗</a>
+          <a class="textlink" href="https://github.com/SEELARUPESH" target="_blank" rel="noreferrer">GitHub ↗</a>
+          <a class="textlink" href="https://leetcode.com/u/RkV3cPQwep/" target="_blank" rel="noreferrer">LeetCode ↗</a>
+          <a class="textlink" href="tel:+919182092674">+91 9182092674</a>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="wrap"><span>© 2026 Seela Rupesh</span><span>Designed with focus on engineering, clarity and simplicity.</span></footer>
+</body>
+</html>
